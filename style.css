@@ -1,0 +1,57 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+      justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  border: 1px solid black;
+}
+#loadingCanvas {
+  width: 479px;
+  height: 248PX;
+  margin-right: 10px; /* Space between the two canvases */
+}
+#canvas {
+  width: 100%; /* Default width for larger screens */
+  max-width: 564px; /* Max width to prevent it from exceeding the original size */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 100px; /* Space between the two canvases */
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  body {
+    justify-content: flex-start; /* Align container to the top of the screen */
+    align-items: flex-start; /* Align container to the left of the screen */
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #canvas {
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: none;
+    height: auto;
+    margin-left: 0; /* Remove the space between the two canvases */
+  }
+  #loadingCanvas {
+    width: 100%; 
+    height: 100%;
+  /* Remove the space between the two canvases */
+  }
+}
